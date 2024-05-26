@@ -32,7 +32,7 @@ window.onload = function(){
 			document.getElementById('card').id = "cardFlip";
 			setTimeout(function(){
 				//document.getElementById('cardFlip').src = "images/" + (cardImageCommon[d2Val]) + ".png";				document.getElementById('cardFlip').src = "images/" + (cardImageCommon[d2Val]) + ".png";
-				document.getElementById('cardFlip').src = "images/" + 0 + ".png";
+				document.getElementById('cardFlip').src = 0 + ".png";
 				cardDraw = 1;
 			}, 1770);
 
@@ -95,7 +95,7 @@ window.onload = function(){
 		}
 		else if (cardDraw == 1) {
 			document.getElementById('cardFlip').id = "card";
-			document.getElementById('card').src = "images/defaultCard.png";
+			document.getElementById('card').src = "defaultCard.png";
 			document.getElementById('cardText').innerHTML = "Click The Card To Reveal";
 			cardDraw = 0;
 		}
