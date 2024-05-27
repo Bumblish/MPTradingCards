@@ -9,7 +9,7 @@ window.onload = function(){
 	var cardDraw = 0;
 
 	var cardNameCommon = ["Pattern 24 rifle", "pattern 5 rain gear", "pulvian destroyer", "pulvian tugboat", "pulvian patrol boat", "marines barge", "merchant marines", "domestic salamander", "garret", "marine", "felnid seaman", "seaman", "naval NCO", "pattern 208 officer cutlass", "admiral thompson", "join today", "chain of command", "pattern 105 infantry cannon", "pattern 56 light mortar", "steam train", "refuel and reload", "replenishment at sea", "special delivery", "ships store", "ships gally", "c-rats", "repair forge", "maintence crew", "machinists's mate", "goblin", "goblin crewmember", "why we fight", "for them", "watch tower", "mess tent", "commisary", "GAMBLING IS PROHIBITED", "Felinid 1", "felinid 2", "felinid 3", "the trades", "first aid", "detention"];
-	var cardFlavorCommon = ["", "", "", "", "", "", "", "", "a garret sitting on a beach", "", "", "", "", "a cheaper looking blade around a marine's hip", "admiral thompson's fancy portrate surrounded by fruit", "civilians sign up for service", "a detailed diagram of the chain of command", "", "", "", "cranes hoist a crate into a ship", "two ships exchange goods on the waves", "a cargo ship delivers crates of goods to the base", "", "", "standard canned meal", "a forge where repair crews forge and repair parts for the ships", "soldiers hammer away at a part", "a sailor throws a garret in the boiler", "anatomical diagram of a goblin", "a goblin working the deck of a ship", "goblins chain up felnid slaves who are crying", "cats paint flowers on the hull of a ship", "", "", "", "soldiers gather around a scorpian fight", "", "", "", "one sailor hammers in a nail as another applies oil to a brace", "a fox applies medical strips to a wounded soldier", "the goblin cage"];
+	var cardFlavorCommon = ["test", "test", "test", "terst", "test", "test", "test", "test", "a garret sitting on a beach", "test", "test", "test", "test", "a cheaper looking blade around a marine's hip", "admiral thompson's fancy portrate surrounded by fruit", "civilians sign up for service", "a detailed diagram of the chain of command", "test", "test", "test", "cranes hoist a crate into a ship", "two ships exchange goods on the waves", "a cargo ship delivers crates of goods to the base", "test", "test", "standard canned meal", "a forge where repair crews forge and repair parts for the ships", "soldiers hammer away at a part", "a sailor throws a garret in the boiler", "anatomical diagram of a goblin", "a goblin working the deck of a ship", "goblins chain up felnid slaves who are crying", "cats paint flowers on the hull of a ship", "test", "test", "test", "soldiers gather around a scorpian fight", "test", "test", "test", "one sailor hammers in a nail as another applies oil to a brace", "a fox applies medical strips to a wounded soldier", "the goblin cage"];
 	var cardImageCommon = ["0.png", "2.png", "https://www.marinersmuseum.org/wp-content/uploads/2021/08/CSS_Arkansas_2.jpg?w=1024","https://upload.wikimedia.org/wikipedia/commons/9/9f/USS_Daisy_55973.jpg", "https://www.thoughtco.com/thmb/wBBX0iaMqhiFtQswTWC5OtIJyys=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/uss-monitor-large-56a61c385f9b58b7d0dff705.jpg", "https://qph.cf2.quoracdn.net/main-qimg-1f93723a3f40007bbd97aefa83396154-lq", "8.png","9.png","10.png", "11.png", "0.png","0.png", "0.png", "0.png", "0.png", "0.png", "0.png", "https://upload.wikimedia.org/wikipedia/commons/d/d0/CW_Arty_Whitworth.jpg", "0.png", "0.png", "0.png", "0.png", "0.png", "0.png", "https://i.pinimg.com/550x/00/2f/26/002f260185ab2e1e746c0da7aedd75fb.jpg", "https://www.kration.info/_Media/cration-b-unit-cocoa-open-b_med_hr.jpeg",  "0.png", "0.png", "0.png", "0.png", "0.png", "0.png", "0.png", "0.png", "0.png", "0.png", "0.png", "0.png", "0.png", "0.png", "0.png", "0.png", "0.png"];
 
 	var	cardNameUncommon = ["", "", "", "", "", "", "", ""];
@@ -33,7 +33,7 @@ window.onload = function(){
 
 		if(cardDraw == 0){
 			document.getElementById('card').id = "cardFlip";
-			d1Val = parseInt(Math.random() * 101);
+			d1Val = parseInt(Math.random() * 40);
 			console.log(d1Val);
 			
 
@@ -66,8 +66,11 @@ window.onload = function(){
 				console.log(d2Val);
 				document.getElementById('cardText').innerHTML = "You Drew A Common Card: \"" + (cardNameCommon[d2Val]) + "\"";
 				setTimeout(function(){
-					document.getElementById('cardFlip').src = (cardImageCommon[d2Val]);			
+					document.getElementById('cardFlip').src = (cardImageCommon[d2Val]);	
+					document.getElementById('flavorTextOut').id = "flavorText";
+					document.getElementById('flavorText').innerHTML = (cardFlavorCommon[d2Val]);		
 					document.getElementById('hide').id = "show";
+					
 				}, 1770);
 				cardDraw = 1;
 				console.log("card drawn");
@@ -77,8 +80,10 @@ window.onload = function(){
 				console.log(d2Val);
 				document.getElementById('cardText').innerHTML = "You Drew An Uncommon Card: \"" + (cardNameUncommon[d2Val]) + "\"";
 				setTimeout(function(){
-					document.getElementById('cardFlip').src = (cardImageUncommon[d2Val]);			
+					document.getElementById('cardFlip').src = (cardImageUncommon[d2Val]);
+					document.getElementById('flavorText').innerHTML = (cardFlavorUncommon[d2Val]);
 					document.getElementById('hide').id = "show";
+					document.getElementById('flavorTextOut').id = "flavorText";
 				}, 1770);		
 				cardDraw = 1;
 				console.log("card drawn");
@@ -88,8 +93,10 @@ window.onload = function(){
 				console.log(d2Val);
 				document.getElementById('cardText').innerHTML = "You Drew A Rare Card:  \"" + (cardNameRare[d2Val]) + "\"";
 				setTimeout(function(){
-					document.getElementById('cardFlip').src = (cardImageRare[d2Val]);			
+					document.getElementById('cardFlip').src = (cardImageRare[d2Val]);
+					document.getElementById('flavorText').innerHTML = (cardFlavorRare[d2Val]);			
 					document.getElementById('hide').id = "show";
+					document.getElementById('flavorTextOut').id = "flavorText";
 				}, 1770);	
 				cardDraw = 1;	
 				console.log("card drawn");	
@@ -99,8 +106,10 @@ window.onload = function(){
 				console.log(d2Val);
 				document.getElementById('cardText').innerHTML = "You Drew A Very Rare Card: \"" + (cardNameVeryRare[d2Val]) + "\"";
 				setTimeout(function(){
-					document.getElementById('cardFlip').src = (cardImageVaryRare[d2Val]);			
+					document.getElementById('cardFlip').src = (cardImageVaryRare[d2Val]);	
+					document.getElementById('flavorText').innerHTML = (cardFlavorVeryRare[d2Val]);		
 					document.getElementById('hide').id = "show";
+					document.getElementById('flavorTextOut').id = "flavorText";
 				}, 1770);
 				cardDraw = 1;
 				console.log("card drawn");			
@@ -110,8 +119,10 @@ window.onload = function(){
 				console.log(d2Val);
 				document.getElementById('cardText').innerHTML = "You Drew A Legendary Card: \"" + (cardNameLegendary[d2Val]) + "\"";
 				setTimeout(function(){
-					document.getElementById('cardFlip').src = (cardImageLegendary[d2Val]);			
+					document.getElementById('cardFlip').src = (cardImageLegendary[d2Val]);
+					document.getElementById('flavorText').innerHTML = (cardFlavorLegendary[d2Val]);			
 					document.getElementById('hide').id = "show";
+					document.getElementById('flavorTextOut').id = "flavorText";
 				}, 1770);	
 				cardDraw = 1;
 				console.log("card drawn");
@@ -123,6 +134,10 @@ window.onload = function(){
 			document.getElementById('cardFlip').id = "card";
 			document.getElementById('card').src = "defaultCard.png";
 			document.getElementById('cardText').innerHTML = "Click The Card To Reveal";
+			document.getElementById('flavorText').id = "flavorTextOut";
+			setTimeout(function(){
+				document.getElementById('flavorTextOut').innerHTML = "";
+			}, 1500);
 			cardDraw = 0;
 		}
 
