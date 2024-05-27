@@ -1,7 +1,7 @@
 
 
 
-
+/* Card Selector */
 #card {
 	display: block;
 	margin-left: auto;
@@ -49,8 +49,60 @@ body{
 	font-family:"American Typewriter",serif;
 	font-size: 2em;
 	background: #E8EAF6;
+	padding: ;
 }
+#hide{
+	visibility: hidden;
+	font-size: 0.5em;
+}
+#show{
+	visibility: visible;
+	font-size: 0.6em;
+	position: relative;
+	top: 80px;
+}
+
+#show { animation: slideIn 3s 1}
+
+@keyframes slideIn {
+	0%{transform: translate(-500px,0px);}
+	90%{transform: translate(30px,0px);}
+	100%{transform: translate(0px,0px);}
+
+}
+/* Landing Screen and about */
 #welcome{
 	text-align: center;
 	position: relative;
+	background: #C5CAE9;
+	padding: 30px;
 }
+#link{
+	display: block;
+	text-align: center;	
+	font-size: 2em;
+
+}
+#credit{
+	position: relative;
+	font-size: 0.5em;
+
+}
+button{
+	border: solid 2px #C5CAE9;
+	border-radius: 10px;
+	inline-size: 400px;
+	padding: 40px;
+	transition-duration: 0.5s;
+	font-family:"American Typewriter",serif;
+	font-size: 0.5em;
+}
+button:hover{
+	background-color:#C5CAE9;
+}
+
+#stats{
+	text-align: center;
+	padding-top: 40px;
+}
+
