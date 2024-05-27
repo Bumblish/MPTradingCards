@@ -33,7 +33,6 @@ window.onload = function(){
 
 		if(cardDraw == 0){
 			document.getElementById('card').id = "cardFlip";
-			cardDraw = 1;
 			d1Val = parseInt(Math.random() * 101);
 			console.log(d1Val);
 			
@@ -69,8 +68,9 @@ window.onload = function(){
 				setTimeout(function(){
 					document.getElementById('cardFlip').src = (cardImageCommon[d2Val]);			
 					document.getElementById('hide').id = "show";
-					cardDraw = 1;
 				}, 1770);
+				cardDraw = 1;
+				console.log("card drawn");
 			}
 			else if (rarity == 2) {
 				d2Val = parseInt(Math.random() * 8);
@@ -79,8 +79,9 @@ window.onload = function(){
 				setTimeout(function(){
 					document.getElementById('cardFlip').src = (cardImageUncommon[d2Val]);			
 					document.getElementById('hide').id = "show";
-					cardDraw = 1;
-				}, 1770);			
+				}, 1770);		
+				cardDraw = 1;
+				console.log("card drawn");
 			}
 			else if (rarity == 3) {
 				d2Val = parseInt(Math.random() * 8);
@@ -89,8 +90,9 @@ window.onload = function(){
 				setTimeout(function(){
 					document.getElementById('cardFlip').src = (cardImageRare[d2Val]);			
 					document.getElementById('hide').id = "show";
-					cardDraw = 1;
-				}, 1770);			
+				}, 1770);	
+				cardDraw = 1;	
+				console.log("card drawn");	
 			}
 			else if (rarity == 4) {
 				d2Val = parseInt(Math.random() * 8);
@@ -99,8 +101,9 @@ window.onload = function(){
 				setTimeout(function(){
 					document.getElementById('cardFlip').src = (cardImageVaryRare[d2Val]);			
 					document.getElementById('hide').id = "show";
-					cardDraw = 1;
-				}, 1770);			
+				}, 1770);
+				cardDraw = 1;
+				console.log("card drawn");			
 			}
 			else if (rarity == 5) {
 				d2Val = parseInt(Math.random() * 8);
@@ -109,8 +112,9 @@ window.onload = function(){
 				setTimeout(function(){
 					document.getElementById('cardFlip').src = (cardImageLegendary[d2Val]);			
 					document.getElementById('hide').id = "show";
-					cardDraw = 1;
-				}, 1770);			
+				}, 1770);	
+				cardDraw = 1;
+				console.log("card drawn");
 			}
 
 
@@ -131,7 +135,6 @@ window.onload = function(){
 
 	var bodyClick = document.getElementsByTagName('img');
 	var bodyElement = bodyClick[0];
-
 
 	bodyElement.addEventListener('click',bodyClickHandler);
 }
