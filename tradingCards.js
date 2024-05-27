@@ -33,7 +33,7 @@ window.onload = function(){
 
 		if(cardDraw == 0){
 			document.getElementById('card').id = "cardFlip";
-			
+			cardDraw = 1;
 			d1Val = parseInt(Math.random() * 101);
 			console.log(d1Val);
 			
