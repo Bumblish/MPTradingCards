@@ -20,7 +20,7 @@
 } 
 
 #card{
-	animation: cardWobble 4s infinite;
+	animation: cardWobble 4s 1;
 }
 #cardFlip{
 	animation: flip 4s 1;
