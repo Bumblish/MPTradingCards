@@ -58,7 +58,7 @@ window.onload = function(){
 			}
 			//
 			if (rarity == 1) {
-				d2Val = parseInt(Math.random() * 59);
+				d2Val = parseInt(Math.random() * 57);
 				console.log(d2Val);
 				document.getElementById('cardText').innerHTML = "You Drew A Common Card: " + (cardNameCommon[d2Val]) + "";
 				setTimeout(function(){
