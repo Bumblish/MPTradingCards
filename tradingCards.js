@@ -58,7 +58,7 @@ window.onload = function(){
 			}
 			//
 			if (rarity == 1) {
-				d2Val = parseInt(Math.random() * 61);
+				d2Val = parseInt(Math.random() * 59);
 				console.log(d2Val);
 				document.getElementById('cardText').innerHTML = "You Drew A Common Card: " + (cardNameCommon[d2Val]) + "";
 				setTimeout(function(){
@@ -71,7 +71,7 @@ window.onload = function(){
 				console.log("card drawn");
 			}
 			else if (rarity == 2) {
-				d2Val = parseInt(Math.random() * 47);
+				d2Val = parseInt(Math.random() * 45);
 				console.log(d2Val);
 				document.getElementById('cardText').innerHTML = "You Drew An Uncommon Card: " + (cardNameUncommon[d2Val]) + "";
 				setTimeout(function(){
@@ -84,7 +84,7 @@ window.onload = function(){
 				console.log("card drawn");
 			}
 			else if (rarity == 3) {
-				d2Val = parseInt(Math.random() * 43);
+				d2Val = parseInt(Math.random() * 41);
 				console.log(d2Val);
 				document.getElementById('cardText').innerHTML = "You Drew A Rare Card:  " + (cardNameRare[d2Val]) + "";
 				setTimeout(function(){
@@ -97,7 +97,7 @@ window.onload = function(){
 				console.log("card drawn");	
 			}
 			else if (rarity == 4) {
-				d2Val = parseInt(Math.random() * 26);
+				d2Val = parseInt(Math.random() * 24);
 				console.log(d2Val);
 				document.getElementById('cardText').innerHTML = "You Drew A Very Rare Card: " + (cardNameVeryRare[d2Val]) + "";
 				setTimeout(function(){
@@ -110,7 +110,7 @@ window.onload = function(){
 				console.log("card drawn");			
 			}
 			else if (rarity == 5) {
-				d2Val = parseInt(Math.random() * 11);
+				d2Val = parseInt(Math.random() * 9);
 				console.log(d2Val);
 				document.getElementById('cardText').innerHTML = "You Drew A Legendary Card: " + (cardNameLegendary[d2Val]) + "";
 				setTimeout(function(){
